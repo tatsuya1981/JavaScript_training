@@ -1,5 +1,5 @@
 const loading = document.querySelector('#loading');
 
 window.addEventListener('load', () => {
-  loading.classList.add('loading');
+  loading.classList.add('loaded');
 })
