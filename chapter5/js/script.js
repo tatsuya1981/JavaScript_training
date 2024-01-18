@@ -1,20 +1,41 @@
 const menu = document.querySelector('#menu');
 
 const lists = [
-  'apple.jpg',
-  'fig.jpg',
-  'lemon.jpg',
-  'lime.jpg',
-  'mango.jpg',
-  'strawberry.jpg',
+  {
+    name: 'イチゴ',
+    img: 'strawberry.jpg',
+    price: 450,
+  },
+  {
+    name: 'ライム',
+    img: 'lime.jpg',
+    price: 400,
+  },
+  {
+    name: 'マンゴー',
+    img: 'mango.jpg',
+    price: 500,
+  },
+  {
+    name: 'レモン',
+    img: 'lemon.jpg',
+    price: 400,
+  },
+  {
+    name: 'イチジク',
+    img: 'fig.jpg',
+    price: 500,
+  },
+  {
+    name: 'リンゴ',
+    img: 'apple.jpg',
+    price: 400,
+  },
 ];
-// console.log(lists);
-const content = `<div><img src="images/${lists[0]}" alt="strawberry"></div>
-    <div><img src="images/${lists[1]}" alt="strawberry"></div>
-    <div><img src="images/${lists[2]}" alt="strawberry"></div>
-    <div><img src="images/${lists[3]}" alt="strawberry"></div>
-    <div><img src="images/${lists[4]}" alt="strawberry"></div>
-    <div><img src="images/${lists[5]}" alt="strawberry"></div>
-`;
+console.log(lists[0]['name']);
 
-menu.insertAdjacentHTML('beforeend', content);
+for(let i =0; i < lists.length; i++){
+  const content = `<div><img src="images/${lists[i].img}" alt="strawberry"><h2>${lists[i].name}</h2>
+  <p>${lists[i].price}円</p></div>`;
+  menu.insertAdjacentHTML('beforeend', content);
+}
